@@ -1,0 +1,73 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+nav {
+    background: #ccc;
+}
+#check, label {
+    display: none;
+}
+ul {
+    display: flex;
+}
+ul li {
+    list-style: none;
+    padding: 15px;
+}
+ul .active  {
+    color: green;
+}
+nav ul li:hover{
+    background: rgb(8, 197, 118);
+}
+ul a {
+    color: #fff;
+    text-decoration: none;
+}
+
+
+@media (max-width:450px){
+    nav {
+        display: none;
+    }
+    label {
+        display: block;
+    }
+    ul {
+        display: block;
+        background: #000;
+        
+    }
+    #check:checked ~ nav{
+        display: block;
+    }
+}
+.sub-menu-1{
+    display: none;
+}
+nav ul li:hover .sub-menu-1 {
+    display: block;
+    position: absolute;
+    background: rgb(0,100,0);
+    margin-left: -15px;
+}
+nav ul li:hover .sub-menu-1 ul{
+    display: block;
+}
+nav ul li:hover .sub-menu-1  ul li {
+    width: 150px;
+    padding: 10px;
+    border-bottom: 1px dotted #fff;
+    background: transparent;
+    border-radius: 0;
+    text-align: left;
+}
+.menu-bar ul li:hover .sub-menu-1  ul li:last-child {
+    border-bottom: none ;
+}
+nav ul li:hover .sub-menu-1  ul li a:hover{
+    color: #b2ff00;
+}
